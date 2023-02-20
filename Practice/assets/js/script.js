@@ -28,7 +28,7 @@
 // for (const item of spans) {
 //   if (item.innerText == "Salam3") 
 //     item.style.color = "red";
-  
+
 // }
 
 // let elem=document.querySelector("h2");
@@ -42,7 +42,68 @@
 // elem.style.position="relative";
 // elem.style.top="300px"
 
-let h1=document.querySelector("h1");
+// let h1=document.querySelector("h1");
 
-h1.className="test";
-console.log(h1);
+// h1.className="test";
+// console.log(h1);
+
+// h1.classList.add("test")
+// h1.classList.remove("test")
+
+// h1.classList.contains("header");
+// console.log(h1);
+
+
+// let button = document.querySelector("#products button");
+
+// let h1 = document.querySelector("#products h1")
+// console.log(button);
+
+// button.onclick=function(){
+//     h1.style.color="red";
+// }
+// button.onclick=function(){
+//     h1.style.color="magenta";
+// }
+
+// button.addEventListener("click",function(){
+//     alert("salam1")
+// })
+
+
+// function test(){
+//     alert("test function")
+// }
+
+// button.addEventListener("click",test
+
+// )
+
+// button.addEventListener("click", function () {
+//     // h1.className = "h1-design";
+
+//     h1.classList.add("h1-design");
+
+
+// })
+
+
+let btnon = document.querySelector("#products .on");
+let btnoff = document.querySelector("#products .off");
+let h1 = document.querySelector("#products h1");
+btnon.addEventListener("click", function () {
+   
+    if(h1.classList.contains("inActive")){
+        h1.classList.remove("inActive")
+    }
+    h1.classList.add("active")
+})
+btnoff.addEventListener("click", function () {
+   
+    if(h1.classList.contains("active")){
+        h1.classList.remove("active")
+    }
+    h1.classList.add("inActive")
+})
+
+
