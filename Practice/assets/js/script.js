@@ -178,15 +178,19 @@ button.addEventListener("click", function () {
             return
         }
     }
-    let li=document.createElement("li");
-    li.className="list-group-item my-1";
+    let li = document.createElement("li");
+    li.className = "list-group-item my-1";
 
-    console.log(li)
+    // console.log(li)
 
-    li.innerText=inputValue;
+    li.innerText = inputValue;
 
     ul.append(li);
+
+
+    
     // ul.innerHTML += `<li class="list-group-item my-1">${inputValue}</li>`;
 
     input.value = "";
 })
+
