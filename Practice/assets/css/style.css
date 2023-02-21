@@ -15,7 +15,7 @@ background-color: magenta;
     font-size: 50px;
 } */
 
-.active{
+/* .active{
     color: white;
     background-color:green ;
     border-radius: 5px;
@@ -28,4 +28,35 @@ background-color: magenta;
     border-radius: 5px;
     border: 1px solid magenta;
     width: max-content;
+} */
+
+#products {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+   
+}
+.icon{
+    display: flex;
+    justify-content: center;
+   
+
+}
+.icon i{
+    font-size: 100px;
+}
+.container-edit{
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 0 50px;
+}
+.active{
+    color: yellow;
+}
+.body-active{
+    background-color: black;
 }

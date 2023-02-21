@@ -91,19 +91,49 @@
 let btnon = document.querySelector("#products .on");
 let btnoff = document.querySelector("#products .off");
 let h1 = document.querySelector("#products h1");
-btnon.addEventListener("click", function () {
+let icon=document.querySelector("#products .box .icon i")
+let body=document.querySelector(".body-active");
+
+// btnon.addEventListener("click", function () {
    
-    if(h1.classList.contains("inActive")){
-        h1.classList.remove("inActive")
-    }
-    h1.classList.add("active")
-})
-btnoff.addEventListener("click", function () {
+//     if(h1.classList.contains("inActive")){
+//         h1.classList.remove("inActive")
+//     }
+//     h1.classList.add("active")
+// })
+// btnoff.addEventListener("click", function () {
    
-    if(h1.classList.contains("active")){
-        h1.classList.remove("active")
+//     if(h1.classList.contains("active")){
+//         h1.classList.remove("active")
+//     }
+//     h1.classList.add("inActive")
+// })
+
+btnon.addEventListener("click",function(event){
+
+    if(icon.classList.contains("active")&& body.classList.contains("body-active")){
+        icon.classList.remove("active");
+        body.classList.remove("body-active");
+        event.target.innerText="on"
+        event.target.classList.remove("btn-danger")
+        event.target.classList.add("btn-success")
     }
-    h1.classList.add("inActive")
+    else{
+        icon.classList.add("active");
+        body.classList.add("body-active");
+        event.target.innerText="off"
+        event.target.classList.remove("btn-success")
+        event.target.classList.add("btn-danger")
+    }
+   
 })
 
+// btnoff.addEventListener("click",function(){
+//     icon.classList.remove("active");
+//     body.classList.remove("body-active");
+// })
 
+// document.querySelector("a").addEventListener("click",function(e){
+//     e.preventDefault();
+//     console.log("Anar");
+// })
