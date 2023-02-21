@@ -91,42 +91,42 @@
 let btnon = document.querySelector("#products .on");
 let btnoff = document.querySelector("#products .off");
 let h1 = document.querySelector("#products h1");
-let icon=document.querySelector("#products .box .icon i")
-let body=document.querySelector(".body-active");
+let icon = document.querySelector("#products .box .icon i")
+let body = document.querySelector(".body-active");
 
 // btnon.addEventListener("click", function () {
-   
+
 //     if(h1.classList.contains("inActive")){
 //         h1.classList.remove("inActive")
 //     }
 //     h1.classList.add("active")
 // })
 // btnoff.addEventListener("click", function () {
-   
+
 //     if(h1.classList.contains("active")){
 //         h1.classList.remove("active")
 //     }
 //     h1.classList.add("inActive")
 // })
 
-btnon.addEventListener("click",function(event){
+// btnon.addEventListener("click",function(event){
 
-    if(icon.classList.contains("active")&& body.classList.contains("body-active")){
-        icon.classList.remove("active");
-        body.classList.remove("body-active");
-        event.target.innerText="on"
-        event.target.classList.remove("btn-danger")
-        event.target.classList.add("btn-success")
-    }
-    else{
-        icon.classList.add("active");
-        body.classList.add("body-active");
-        event.target.innerText="off"
-        event.target.classList.remove("btn-success")
-        event.target.classList.add("btn-danger")
-    }
-   
-})
+//     if(icon.classList.contains("active")&& body.classList.contains("body-active")){
+//         icon.classList.remove("active");
+//         body.classList.remove("body-active");
+//         event.target.innerText="on"
+//         event.target.classList.remove("btn-danger")
+//         event.target.classList.add("btn-success")
+//     }
+//     else{
+//         icon.classList.add("active");
+//         body.classList.add("body-active");
+//         event.target.innerText="off"
+//         event.target.classList.remove("btn-success")
+//         event.target.classList.add("btn-danger")
+//     }
+
+// })
 
 // btnoff.addEventListener("click",function(){
 //     icon.classList.remove("active");
@@ -137,3 +137,56 @@ btnon.addEventListener("click",function(event){
 //     e.preventDefault();
 //     console.log("Anar");
 // })
+
+// icon.addEventListener("mouseover",function(){
+//     icon.classList.add("active");
+//     body.classList.add("body-active");
+// })
+
+// icon.addEventListener("mouseout",function(){
+//     icon.classList.remove("active");
+//     body.classList.remove("body-active");
+// })
+
+let input = document.querySelector("#products input");
+let button = document.querySelector("#products button");
+let ul = document.querySelector("#products ul")
+
+// <!-- <li class="list-group-item my-1">Salam</li> -->
+// button.addEventListener("click",function(){
+//     console.log(input.value);
+//     input.value=""
+// })
+button.addEventListener("click", function () {
+    let inputValue = input.value;
+    // if(!!!inputValue){
+    //     alert("Dont empty")
+    //     return
+    // }
+    if (inputValue == "") {
+        alert("Dont empty")
+        return
+    }
+
+
+    let list = document.querySelectorAll("li");
+
+    for (const item of list) {
+        if (item.innerText == inputValue) {
+            alert("item already exist")
+            input.value = "";
+            return
+        }
+    }
+    let li=document.createElement("li");
+    li.className="list-group-item my-1";
+
+    console.log(li)
+
+    li.innerText=inputValue;
+
+    ul.append(li);
+    // ul.innerHTML += `<li class="list-group-item my-1">${inputValue}</li>`;
+
+    input.value = "";
+})
