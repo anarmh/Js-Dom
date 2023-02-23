@@ -1,0 +1,5 @@
+#products .delete{
+    display: block;
+    display: flex;
+    justify-content: right;
+}
