@@ -2,4 +2,5 @@
     display: block;
     display: flex;
     justify-content: right;
+    cursor: pointer;
 }
